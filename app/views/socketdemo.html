@@ -1,0 +1,37 @@
+<h2>Socket Demo</h2>
+
+<p>This page demos the use of a websocket for various tasks.  To start Connect the websocket.  To create an async timer on the server click on the create timer.  To send messages to other people connected to the server type in your name, a message and send!</p>
+
+
+
+<div class='body'>
+    <div class='actions'>
+        <button ng-click='connect();'>CONNECT</button>
+        <button ng-click='disconnect();'>DISCONNECT</button>
+    </div>
+
+    <section class='leftArea'>
+        <div class='timerSettings'>
+            <h3>Set Timer</h3>
+            <div><label>Timer Delay (in s)</label> <input type='number' ng-model='delay'></input></div>
+            <div><label>Timer Repeat</label> <input type='number' ng-model='repeat'></input></div>
+            <div><button ng-click='setTimer();'>SET TIMER</button></div>
+        </div>
+
+        <div class='broadcastSettings'>
+            <h3>Send Broadcast</h3>
+            <div><label>Name</label><input type='text' ng-model='name'></input></div>
+            <div><label>Message</label><input type='text' ng-model='message'></input></div>
+            <div><button ng-click='sendMessage();'>SEND MESSAGE</button></div>
+        </div>
+
+    </section>
+    <section class='rightArea'>
+
+        <div class='messageArea' ng-repeat='message in messages' ng-class='message.type'>
+            {{message.text}}
+        </div>
+    </section>
+</div>
+
+

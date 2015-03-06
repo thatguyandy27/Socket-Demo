@@ -1,0 +1,33 @@
+.messageArea{
+    border-bottom: 1px solid lightgrey;
+    margin-top: 10px;
+}
+
+.rightArea{
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    border: 1px solid lightblue;
+    padding: 5px;
+}
+
+.leftArea{
+    display: inline-block;
+    width: 45%;
+}
+
+.connect{
+    color:green;
+}
+
+.disconnect{
+    color:red;
+}
+
+.timer{
+    color:blue;
+}
+
+.broadcast{
+    color:purple;
+}
